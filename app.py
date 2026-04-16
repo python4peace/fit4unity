@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# LifeHaven Care Portal — by ReubenSoul4peaceunity
+# ReubenSoul PeaceUnity LifeHaven — by ReubenSoul4peaceunity
 
 import os, io, math, random, sqlite3
 from datetime import datetime
@@ -14,7 +14,7 @@ from gtts import gTTS
 DB_PATH = "/tmp/lifehaven.db"
 
 st.set_page_config(
-    page_title="LifeHaven Care Portal",
+    page_title="ReubenSoul PeaceUnity LifeHaven",
     page_icon="🌿",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -379,7 +379,7 @@ def voice(text,lang="en"):
     except: return None
 
 # ── TICKER BANNER ──
-items = ["🌿 LifeHaven Care Portal","💪 AI Fitness Tracking",
+items = ["🌿 ReubenSoul PeaceUnity LifeHaven","💪 AI Fitness Tracking",
          "🏥 Elderly Care Management","📋 Digital Intake Forms",
          "🔒 Phone Security Education","📍 GPS Location Tracking",
          "📄 PDF Export","✨ ReubenSoul4peaceunity","🌍 Health • Peace • Unity"] * 2
@@ -396,7 +396,7 @@ st.markdown("""
 <div class="hero">
   <div class="hero-orb"></div><div class="hero-orb2"></div>
   <div class="hero-eyebrow">◆ Premium Care Platform ◆</div>
-  <div class="hero-title">LifeHaven Care Portal</div>
+  <div class="hero-title">ReubenSoul PeaceUnity LifeHaven</div>
   <div class="hero-sub">
     Elderly Care · AI Fitness · Digital Intake · Phone Safety<br>
     Built with Love by ReubenSoul4peaceunity
@@ -417,7 +417,7 @@ st.markdown("""
 # ── SIDEBAR ──
 st.sidebar.markdown("""
 <div class="sidebar-brand">
-  <div class="sidebar-brand-name">🌿 LifeHaven</div>
+  <div class="sidebar-brand-name">🌿 ReubenSoul PeaceUnity LifeHaven</div>
   <div class="sidebar-brand-tag">Care Portal</div>
 </div>
 """, unsafe_allow_html=True)
@@ -695,7 +695,7 @@ elif menu == "📋 Intake Forms":
 
         st.markdown('<div class="intake-sec"><div class="intake-head">🔒 Section 7 — Phone Security Setup</div>', unsafe_allow_html=True)
         device     = st.selectbox("Device Type",["iPhone (iOS)","Android","Basic Cell Phone","No Phone","Other"])
-        ph_concern = st.text_area("Known Issues (suspicious calls, strange apps, etc.)",height=65)
+        ph_concern = st.text_area("Known Issues (suspicious calls, strange apps, etc.)",height=80)
         sec_consent= st.checkbox("✅ Client consents to phone security assessment by care staff")
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -726,7 +726,7 @@ elif menu == "📋 Intake Forms":
             conn.commit(); conn.close()
 
             p = FPDF(); p.add_page()
-            p.set_font("Arial","B",18); p.cell(0,12,"LifeHaven Care Portal",ln=True,align="C")
+            p.set_font("Arial","B",18); p.cell(0,12,"ReubenSoul PeaceUnity LifeHaven",ln=True,align="C")
             p.set_font("Arial","B",13); p.cell(0,8,"Complete Admission Intake Packet",ln=True,align="C"); p.ln(6)
             secs = [
                 ("CLIENT PROFILE",{"Full Name":full_name,"DOB":str(dob),"Gender":gender,"Marital":marital,"Language":prim_lang}),
@@ -746,7 +746,7 @@ elif menu == "📋 Intake Forms":
                     p.set_font("Arial",size=10); p.multi_cell(0,7,v)
                 p.ln(3)
             p.set_font("Arial","I",9)
-            p.cell(0,6,f"Generated: {now_str} | LifeHaven Care Portal",ln=True,align="C")
+            p.cell(0,6,f"Generated: {now_str} | ReubenSoul PeaceUnity LifeHaven",ln=True,align="C")
             fn = "".join(x for x in full_name if x.isalnum() or x==" ").replace(" ","_")
             st.success(f"🎉 Intake packet for **{full_name}** saved successfully!")
             st.download_button("📥 Download Full PDF Intake Packet",
@@ -885,7 +885,7 @@ else:
 # ── FOOTER ──
 st.markdown("""
 <div class="footer">
-  🌿 <b>LifeHaven Care Portal</b> &nbsp;·&nbsp; Built by ReubenSoul4peaceunity<br>
+  🌿 <b>ReubenSoul PeaceUnity LifeHaven</b> &nbsp;·&nbsp; Built by ReubenSoul4peaceunity<br>
   Health &nbsp;•&nbsp; Peace &nbsp;•&nbsp; Unity &nbsp;•&nbsp; Technology
 </div>
 """, unsafe_allow_html=True)
