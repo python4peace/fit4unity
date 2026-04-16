@@ -583,6 +583,7 @@ elif menu == "🏥 Care Portal":
                         (name,dob,med_info,meds,allergies,contact,lang_code,datetime.now().strftime("%Y-%m-%d %H:%M")))
                     conn.commit(); conn.close()
                     st.success(f"✅ {name} saved successfully!")
+                    st.balloons()
         with c2:
             if st.button("📄 Generate PDF"):
                 if not name.strip(): st.error("⚠️ Enter a name first.")
@@ -749,6 +750,7 @@ elif menu == "📋 Intake Forms":
             p.cell(0,6,f"Generated: {now_str} | ReubenSoul PeaceUnity LifeHaven",ln=True,align="C")
             fn = "".join(x for x in full_name if x.isalnum() or x==" ").replace(" ","_")
             st.success(f"🎉 Intake packet for **{full_name}** saved successfully!")
+            st.balloons()
             st.download_button("📥 Download Full PDF Intake Packet",
                 data=pdf_bytes(p),file_name=f"{fn}_intake.pdf",mime="application/pdf")
 
