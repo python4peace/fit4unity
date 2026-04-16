@@ -2,7 +2,7 @@ streamlit==1.42.0
 numpy>=1.26.4,<2.0
 pandas==2.2.3
 opencv-python-headless==4.10.0.84
-mediapipe==0.10.14
+mediapipe==0.10.21
 folium==0.19.5
 streamlit-folium==0.24.0
 fpdf2==2.7.9
