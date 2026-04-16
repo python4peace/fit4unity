@@ -20,7 +20,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.markdown("""
+st.html("""
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -336,7 +336,7 @@ section[data-testid="stSidebar"]{
 /* ── INFO/SUCCESS BOXES ── */
 .stAlert{border-radius:14px!important}
 </style>
-""", unsafe_allow_html=True)
+""")
 
 # ── DB INIT ──
 def init_db():
