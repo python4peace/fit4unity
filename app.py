@@ -571,7 +571,7 @@ elif menu == "🏥 Care Portal":
         dob       = st.text_input("Date of Birth (YYYY-MM-DD)")
         med_info  = st.text_area("Medical Conditions", height=80)
         meds      = st.text_area("Medications & Dosage", height=80)
-        allergies = st.text_area("Allergies", height=60)
+        allergies = st.text_area("Allergies", height=68)
         contact   = st.text_input("Emergency Contact (Name / Relation / Phone)")
         c1,c2 = st.columns(2)
         with c1:
